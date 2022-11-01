@@ -31,4 +31,9 @@ THEN the password is either displayed in an alert or written to the page
 ## Mock-Up
 
 http://127.0.0.1:5500/index.html
-https://github.com/RussC22/Password-Generator.git
+https://github.com/RussC22/Password-Generator.git![Screenshot Password Generator]
+
+![Screenshot Password Generator](https://user-images.githubusercontent.com/114961971/199156387-4fe74626-2515-4559-9f8c-7042eec9f09e.jpg)
+
+
+
