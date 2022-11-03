@@ -24,7 +24,6 @@ var includeUpperCase = confirm("Do you want to use Uppercase letters? ")
 var includeLowerCase = confirm("Do you want to use Lowercase letters? ")
 var includeNumber = confirm("Do you want to use Random numbers?")
 
-
 if (includeNumber === true) {
   input += numbers; 
 }
