@@ -10,7 +10,7 @@ var input = [];
 // prompts after clicking for password criteria
 function generatePassword() {
 console.log(numbers,upperCaseLetters,lowerCaseLetters,special);
-}
+
 var passwordLength = parseInt(prompt("choose a length of at least 8 characters and no more than 128 characters"))
 
 // length of password being at 8 characters but no more than 128 characters
@@ -25,7 +25,37 @@ var includeLowerCase = confirm("Do you want to use Lowercase letters? ")
 var includeNumber = confirm("Do you want to use Random numbers?")
 
 
+if (includeNumber === true) {
+  input += numbers; 
+}
+console.log(input)
 
+if (includeSpecialCharacters === true) {
+ input += special; 
+
+ console.log("special")
+}
+console.log("special")
+if (includeLowerCase === true) {
+ input += lowerCaseLetters; 
+
+console.log("lowerCase")
+}
+if (includeUpperCase === true) {
+ input += upperCaseLetters; 
+
+console.log("upperCase")
+}
+var finalPass = ""
+for (var i = 0; i < passwordLength; i++) {
+  var randomNum = Math.floor(Math.random()* input.length)
+  // upperCaseLetters[i] = lowerCaseLetters[i].toUpperCase
+finalPass += input[randomNum] 
+console.log(finalPass)
+ 
+}
+return (finalPass)
+}
 function writePassword() {
   console.log("Hello");
   var password = generatePassword(); 
@@ -34,33 +64,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
-if (includeNumber === true) {
-  input.push(numbers); 
- 
- console.log("numbers")
-}
-if (includeSpecialCharacters === true) {
- input.push(special); 
-
-console.log("special")
-}
-if (includeLowerCase === true) {
- input.push(lowerCaseLetters); 
-
-console.log("lowerCase")
-}
-if (includeUpperCase === true) {
- input.push(upperCaseLetters); 
-
-console.log("upperCase")
-}
-
-for (var i = 0; i < lowerCaseLetters.length; i++) {
-  upperCaseLetters[i] = lowerCaseLetters[i].toUpperCase
-}
-
-
 // Add event listener to generate button
 generateBtn.addEventListener("click",writePassword);
 
